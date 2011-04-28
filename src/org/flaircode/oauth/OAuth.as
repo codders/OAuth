@@ -114,12 +114,12 @@ package org.flaircode.oauth {
 		 * @return result is OAuthToken
 		 *
 		 */
-		public function getRequestToken( url : String ) : URLLoader {
-			return new URLLoader( getRequestTokenRequest( url ) );
+		public function getRequestToken( url : String, requestParams: Object ) : URLLoader {
+			return new URLLoader( getRequestTokenRequest( url, requestParams ) );
 		}
 		
-		public function getRequestTokenRequest( url : String ) : URLRequest {
-			var oauthRequest:OAuthRequest = new OAuthRequest( "GET", url, null, consumer, null );
+		public function getRequestTokenRequest( url : String, requestParams: Object ) : URLRequest {
+			var oauthRequest:OAuthRequest = new OAuthRequest( "GET", url, requestParams, consumer, null );
 			var request:URLRequest = new URLRequest( oauthRequest.buildRequest( signature ) );
 			return request;
 		}

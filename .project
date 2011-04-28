@@ -3,6 +3,7 @@
 	<name>OAuth</name>
 	<comment></comment>
 	<projects>
+		<project>oauth-as3</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

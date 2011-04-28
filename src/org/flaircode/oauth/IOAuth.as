@@ -57,9 +57,9 @@ package org.flaircode.oauth {
 		 * @see org.iotashan.oauth.OAuthToken
 		 *
 		 */
-		function getRequestToken( url : String ) : URLLoader;
+		function getRequestToken( url : String, requestParams : Object ) : URLLoader;
 		
-		function getRequestTokenRequest( url : String ) : URLRequest;
+		function getRequestTokenRequest( url : String, requestParams : Object ) : URLRequest;
 		
 		/**
 		 *
